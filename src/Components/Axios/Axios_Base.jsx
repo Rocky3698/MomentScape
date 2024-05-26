@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axios_base = axios.create({
-    baseURL: 'https://momentscapeapi.onrender.com',
+    baseURL: 'https://momentscape-rest-api.onrender.com',
     headers: {
         'Content-Type': 'application/json',
     },
