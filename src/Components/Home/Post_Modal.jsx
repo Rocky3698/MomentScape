@@ -6,6 +6,7 @@ import axios_base from '../Axios/Axios_Base';
 const Post_Modal = () => {
     const [content, setContent] = useState('');
     const [privacyStatus, setPrivacyStatus] = useState('Public');
+    const [img,setimg] = useState(null)
     // const [category, setCategory] = useState(2); // Assuming category 2 is the default category
 
     const handleSubmit = async () => {
@@ -14,8 +15,8 @@ const Post_Modal = () => {
 
         const data = {
             author: user,
-            image_url: "",  // Handle image URL if necessary
-            video_url: "",  // Handle video URL if necessary
+            image_url: img,  
+            video_url: "", 
             privacy_status: privacyStatus.toLowerCase(),
             content,
             category: 1
@@ -61,7 +62,7 @@ const Post_Modal = () => {
                     onChange={(e) => setContent(e.target.value)}
                     className="textarea textarea-ghost textarea-lg w-full mt-5"
                     placeholder="What's on your mind, Rocky?"></textarea>
-                <Add_to_post />
+                <Add_to_post setImg={setimg} ></Add_to_post>
                 <button onClick={handleSubmit} className='btn mt-4 btn-outline w-full'>Post</button>
             </div>
             <form method="dialog" className="modal-backdrop">

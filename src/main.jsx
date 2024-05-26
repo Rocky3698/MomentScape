@@ -9,6 +9,7 @@ import Registration from './Components/Auth/Registration/Registration';
 import Home from './Components/Home/Home';
 import Videos from './Components/Posts/videos';
 import Posts from './Components/Posts/Posts';
+import Profile from './Components/Profile/Profile';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       },
     ]
   },
+  {
+    path:'/profile',
+    element: <Profile></Profile>,
+  }
   
 ]);
 

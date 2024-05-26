@@ -1,82 +1,367 @@
 [
     {
-        "id": 1,
-        "content": "Enjoying a peaceful day with my friends at the park.",
-        "image": "/public/images/post1.jpg",
-        "video_url": null,
-        "created_at": "2024-04-29T14:53:32.848841Z",
-        "user": 1
+    "pet": {
+    "id": 2,
+    "name": "Cat",
+    "fee": 800,
+    "age": 2,
+    "description": "sfdfdfd",
+    "image_url": "https://pixabay.com/photos/road-forest-fall-path-trail-trees-1072821/",
+    "status": "available",
+    "breed": {
+    "id": 1,
+    "name": "Long Hair Cat",
+    "slug": "long-hair-cat"
     },
-    {
-        "id": 2,
-        "content": "Exploring new trails and embracing nature's beauty.",
-        "image": "/public/images/post2.png",
-        "video_url": "",
-        "created_at": "2024-04-29T15:10:44.923414Z",
-        "user": 1
+    "shelter": {
+    "id": 2,
+    "first_name": "John",
+    "last_name": "Doe",
+    "username": "shahin20809",
+    "email": "rocky20809@gmail.com",
+    "gender": "male",
+    "phone": "+1234567890",
+    "dp": "http://example.com/path/to/profile-pic.jpg",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "role": "adopter",
+    "address": {
+    "city": "New York",
+    "street_address": "123 Main St",
+    "street_number": "456",
+    "postal_code": 10001,
+    "country": "USA"
     },
-    {
-        "id": 3,
-        "content": "Hello everyone! Reflecting on the journey so far and testing my post model.",
-        "image": "/public/images/post3.png",
-        "video_url": null,
-        "created_at": "2024-04-30T11:04:49.399268Z",
-        "user": 8
-    },
-    {
-        "id": 4,
-        "content": "Trying out a new recipe and sharing the delicious results!",
-        "image": "/public/images/post4.webp",
-        "video_url": null,
-        "created_at": "2024-04-30T12:19:12.849141Z",
-        "user": 8
-    },
-    {
-        "id": 5,
-        "content": "Wishing everyone a bright and productive morning!",
-        "image": "/public/images/post5.jpg",
-        "video_url": null,
-        "created_at": "2024-04-30T08:30:00.000000Z",
-        "user": 2
-    },
-    {
-        "id": 6,
-        "content": "Ready to unwind and recharge over the weekend. Sending positive vibes to all!",
-        "image": "/public/images/post6.jpeg",
-        "video_url": null,
-        "created_at": "2024-04-30T12:00:00.000000Z",
-        "user": 3
-    },
-    {
-        "id": 7,
-        "content": "Excited to share a delicious new recipe I've been perfecting. Check out the video for step-by-step instructions!",
-        "image": "/public/images/post10.jpeg",
-        "video_url": "http://example.com/videos/recipe.mp4",
-        "created_at": "2024-05-01T09:30:00.000000Z",
-        "user": 4
-    },
-    {
-        "id": 8,
-        "content": "Just finished an incredible book that left me inspired and enlightened!",
-        "image": "/public/images/post7.jpg",
-        "video_url": null,
-        "created_at": "2024-05-01T14:45:00.000000Z",
-        "user": 5
-    },
-    {
-        "id": 9,
-        "content": "Soaking up the sunshine and feeling grateful for this beautiful day. Happy Sunday, everyone! ☀️",
-        "image": "/public/images/post8.jpeg",
-        "video_url": null,
-        "created_at": "2024-05-02T11:00:00.000000Z",
-        "user": 6
-    },
-    {
-        "id": 10,
-        "content": "Counting down the days until my next adventure! 🌍✈️",
-        "image": "/public/images/post9.jpeg",
-        "video_url": null,
-        "created_at": "2024-05-03T16:00:00.000000Z",
-        "user": 7
+    "rating": 0
     }
-]
+    },
+    "adopter": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "username": "rocky20809",
+    "email": "rocky@gmail.com",
+    "gender": "",
+    "phone": null,
+    "dp": null,
+    "bio": null,
+    "role": "",
+    "address": null,
+    "rating": 0
+    },
+    "request_date": "2024-05-21T02:53:56.150591Z",
+    "status": "applied",
+    "updated_date": "2024-05-21T02:53:56.150609Z"
+    },
+    {
+    "pet": {
+    "id": 6,
+    "name": "cuti cat",
+    "fee": 343,
+    "age": 3,
+    "description": "fdghjkkljkhhfgdf",
+    "image_url": "https://pixabay.com/photos/road-forest-fall-path-trail-trees-1072821/",
+    "status": "wishlist",
+    "breed": {
+    "id": 5,
+    "name": "testing rabbit",
+    "slug": "testing-rabbit"
+    },
+    "shelter": {
+    "id": 2,
+    "first_name": "John",
+    "last_name": "Doe",
+    "username": "shahin20809",
+    "email": "rocky20809@gmail.com",
+    "gender": "male",
+    "phone": "+1234567890",
+    "dp": "http://example.com/path/to/profile-pic.jpg",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "role": "adopter",
+    "address": {
+    "city": "New York",
+    "street_address": "123 Main St",
+    "street_number": "456",
+    "postal_code": 10001,
+    "country": "USA"
+    },
+    "rating": 0
+    }
+    },
+    "adopter": {
+    "id": 2,
+    "first_name": "John",
+    "last_name": "Doe",
+    "username": "shahin20809",
+    "email": "rocky20809@gmail.com",
+    "gender": "male",
+    "phone": "+1234567890",
+    "dp": "http://example.com/path/to/profile-pic.jpg",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "role": "adopter",
+    "address": {
+    "city": "New York",
+    "street_address": "123 Main St",
+    "street_number": "456",
+    "postal_code": 10001,
+    "country": "USA"
+    },
+    "rating": 0
+    },
+    "request_date": "2024-05-21T02:54:28.215528Z",
+    "status": "approved",
+    "updated_date": "2024-05-21T02:54:28.215549Z"
+    },
+    {
+    "pet": {
+    "id": 8,
+    "name": "cuti cat",
+    "fee": 336,
+    "age": 3,
+    "description": "fdghjkkljkhhfgdf",
+    "image_url": "https://pixabay.com/photos/road-forest-fall-path-trail-trees-1072821/",
+    "status": "available",
+    "breed": {
+    "id": 4,
+    "name": "testing rat",
+    "slug": "testing-rat"
+    },
+    "shelter": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "username": "rocky20809",
+    "email": "rocky@gmail.com",
+    "gender": "",
+    "phone": null,
+    "dp": null,
+    "bio": null,
+    "role": "",
+    "address": null,
+    "rating": 0
+    }
+    },
+    "adopter": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "username": "rocky20809",
+    "email": "rocky@gmail.com",
+    "gender": "",
+    "phone": null,
+    "dp": null,
+    "bio": null,
+    "role": "",
+    "address": null,
+    "rating": 0
+    },
+    "request_date": "2024-05-21T02:59:01.199152Z",
+    "status": "reviewed",
+    "updated_date": "2024-05-21T02:59:01.199173Z"
+    },
+    {
+    "pet": {
+    "id": 3,
+    "name": "cuti cat",
+    "fee": 343,
+    "age": 3,
+    "description": "fdghjkkljkhhfgdf",
+    "image_url": "https://pixabay.com/photos/road-forest-fall-path-trail-trees-1072821/",
+    "status": "wishlist",
+    "breed": {
+    "id": 2,
+    "name": "testing cat",
+    "slug": "testing-cat"
+    },
+    "shelter": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "username": "rocky20809",
+    "email": "rocky@gmail.com",
+    "gender": "",
+    "phone": null,
+    "dp": null,
+    "bio": null,
+    "role": "",
+    "address": null,
+    "rating": 0
+    }
+    },
+    "adopter": {
+    "id": 2,
+    "first_name": "John",
+    "last_name": "Doe",
+    "username": "shahin20809",
+    "email": "rocky20809@gmail.com",
+    "gender": "male",
+    "phone": "+1234567890",
+    "dp": "http://example.com/path/to/profile-pic.jpg",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "role": "adopter",
+    "address": {
+    "city": "New York",
+    "street_address": "123 Main St",
+    "street_number": "456",
+    "postal_code": 10001,
+    "country": "USA"
+    },
+    "rating": 0
+    },
+    "request_date": "2024-05-21T02:59:07.183790Z",
+    "status": "adopted",
+    "updated_date": "2024-05-21T02:59:07.183810Z"
+    },
+    {
+    "pet": {
+    "id": 7,
+    "name": "cuti cat",
+    "fee": 336,
+    "age": 3,
+    "description": "fdghjkkljkhhfgdf",
+    "image_url": "https://pixabay.com/photos/road-forest-fall-path-trail-trees-1072821/",
+    "status": "adopted",
+    "breed": {
+    "id": 4,
+    "name": "testing rat",
+    "slug": "testing-rat"
+    },
+    "shelter": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "username": "rocky20809",
+    "email": "rocky@gmail.com",
+    "gender": "",
+    "phone": null,
+    "dp": null,
+    "bio": null,
+    "role": "",
+    "address": null,
+    "rating": 0
+    }
+    },
+    "adopter": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "username": "rocky20809",
+    "email": "rocky@gmail.com",
+    "gender": "",
+    "phone": null,
+    "dp": null,
+    "bio": null,
+    "role": "",
+    "address": null,
+    "rating": 0
+    },
+    "request_date": "2024-05-21T02:59:13.995894Z",
+    "status": "reviewed",
+    "updated_date": "2024-05-21T02:59:13.995913Z"
+    },
+    {
+    "pet": {
+    "id": 8,
+    "name": "cuti cat",
+    "fee": 336,
+    "age": 3,
+    "description": "fdghjkkljkhhfgdf",
+    "image_url": "https://pixabay.com/photos/road-forest-fall-path-trail-trees-1072821/",
+    "status": "available",
+    "breed": {
+    "id": 4,
+    "name": "testing rat",
+    "slug": "testing-rat"
+    },
+    "shelter": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "username": "rocky20809",
+    "email": "rocky@gmail.com",
+    "gender": "",
+    "phone": null,
+    "dp": null,
+    "bio": null,
+    "role": "",
+    "address": null,
+    "rating": 0
+    }
+    },
+    "adopter": {
+    "id": 2,
+    "first_name": "John",
+    "last_name": "Doe",
+    "username": "shahin20809",
+    "email": "rocky20809@gmail.com",
+    "gender": "male",
+    "phone": "+1234567890",
+    "dp": "http://example.com/path/to/profile-pic.jpg",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "role": "adopter",
+    "address": {
+    "city": "New York",
+    "street_address": "123 Main St",
+    "street_number": "456",
+    "postal_code": 10001,
+    "country": "USA"
+    },
+    "rating": 0
+    },
+    "request_date": "2024-05-21T02:59:23.595514Z",
+    "status": "paid",
+    "updated_date": "2024-05-21T02:59:23.595543Z"
+    },
+    {
+    "pet": {
+    "id": 6,
+    "name": "cuti cat",
+    "fee": 343,
+    "age": 3,
+    "description": "fdghjkkljkhhfgdf",
+    "image_url": "https://pixabay.com/photos/road-forest-fall-path-trail-trees-1072821/",
+    "status": "wishlist",
+    "breed": {
+    "id": 5,
+    "name": "testing rabbit",
+    "slug": "testing-rabbit"
+    },
+    "shelter": {
+    "id": 2,
+    "first_name": "John",
+    "last_name": "Doe",
+    "username": "shahin20809",
+    "email": "rocky20809@gmail.com",
+    "gender": "male",
+    "phone": "+1234567890",
+    "dp": "http://example.com/path/to/profile-pic.jpg",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "role": "adopter",
+    "address": {
+    "city": "New York",
+    "street_address": "123 Main St",
+    "street_number": "456",
+    "postal_code": 10001,
+    "country": "USA"
+    },
+    "rating": 0
+    }
+    },
+    "adopter": {
+    "id": 1,
+    "first_name": "",
+    "last_name": "",
+    "username": "rocky20809",
+    "email": "rocky@gmail.com",
+    "gender": "",
+    "phone": null,
+    "dp": null,
+    "bio": null,
+    "role": "",
+    "address": null,
+    "rating": 0
+    },
+    "request_date": "2024-05-21T02:59:31.277694Z",
+    "status": "interviewed",
+    "updated_date": "2024-05-21T02:59:31.277717Z"
+    }
+    ]

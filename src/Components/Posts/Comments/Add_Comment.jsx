@@ -10,6 +10,27 @@ const Add_Comment = ({ dp, post_id, onAddComment }) => {
     const collect_data = (e) => {
         setContent(e.target.value);
     };
+    // const getComment = async () => {
+    //     const token = localStorage.getItem("token");
+    //     try {
+    //         const response = await axios_base.get(`/post/comment/?comment_id=${id}`, {
+    //             headers: {
+    //                 Authorization: `Token ${token}`,
+    //                 "Content-Type": "application/json",
+    //             }
+    //         });
+    //         // console.log(response);
+    //         return response.data[0].content;
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+
+    // };
+    // const seteditComment = async () => {
+    //     const comment = await getComment();
+    //     console.log(comment);
+    //     setContent(comment);
+    // }
 
     const addComment = async () => {
         const token = localStorage.getItem("token");
@@ -59,7 +80,7 @@ const Add_Comment = ({ dp, post_id, onAddComment }) => {
 Add_Comment.propTypes = {
     dp: PropTypes.string,
     post_id: PropTypes.number,
-    onAddComment: PropTypes.func
+    onAddComment: PropTypes.func,
 };
 
 export default Add_Comment;

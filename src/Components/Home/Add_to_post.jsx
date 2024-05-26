@@ -2,15 +2,22 @@ import { BiSolidCategoryAlt } from "react-icons/bi";
 import { SiGoogledisplayandvideo360 } from 'react-icons/si';
 import { FcAddImage } from "react-icons/fc";
 import { useState } from 'react';
-const Add_to_post = () => {
+import PropTypes from 'prop-types';
+const Add_to_post = ({ setImg }) => {
     const [photo, setPhoto] = useState(null);
-    const Set_Photo = (e)=>{
-        console.log(e,photo);
+    const Set_Photo = (e) => {
+        console.log(e, photo);
         setPhoto(e)
     }
     return (
-        <div className='flex justify-between mt-5 px-6 border-2 rounded-lg py-3'>
-            <h2>Add to your post</h2>
+        <div className='flex justify-between mt-5 px-6 border-2 rounded-lg py-3 ps-2'>
+            <input
+                type="text"
+                name="dp"
+                placeholder="DP URL"
+                onChange={(e) => setImg(e.target.value)}
+                className="input input-bordered w-full"
+            />
             <div className='text-3xl flex justify-between gap-3'>
                 <div className='relative group flex items-center'>
                     <BiSolidCategoryAlt className="cursor-pointer text-accent"></BiSolidCategoryAlt>
@@ -34,5 +41,7 @@ const Add_to_post = () => {
         </div>
     );
 };
-
+Add_to_post.propTypes = {
+    setImg: PropTypes.func,
+};
 export default Add_to_post;

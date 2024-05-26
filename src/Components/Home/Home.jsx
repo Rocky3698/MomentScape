@@ -16,8 +16,6 @@ const Home = () => {
                 {validUser && <RightControls></RightControls>}
             </div>
         </div>
-
-
     );
 };
 

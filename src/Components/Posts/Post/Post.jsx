@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import CommentBox from '../Comments/CommentBox';
 import loadAuthor from '../AuthInfo';
 import Video from '../Video';
+import { deletePost, updatePost } from '../../../API/Post';
 
 const Post = ({ post }) => {
     const { id, image_url, video_url, content, author, created_at } = post
@@ -18,6 +19,8 @@ const Post = ({ post }) => {
     const [comments, setComments] = useState([]);
     const [reactions, setReactions] = useState({});
     const navigate = useNavigate();
+    const [edit, setEdit] = useState(true);
+    const [postContent,setcontent]=useState(content);
     const addReact = async (react) => {
         const token = localStorage.getItem("token");
         const user = localStorage.getItem("user_id");
@@ -192,28 +195,45 @@ const Post = ({ post }) => {
 
         return result;
     }
+    const user = localStorage.getItem('user_id');
 
+    const haldleUpdate = async(id)=>{
+        const info = {
+            newContent:postContent,
+            id
+        }
+        const response = await updatePost({info});
+        console.log(response);
+        if(response.status==200){
+            setEdit(!edit);
+            window.location.reload();
+        }
+    }
     return (
         <div className="card card-compact w-4/5 bg-base-100 shadow-sm mx-auto p-5 pb-0 border-0 ">
             <div className="flex justify-between">
                 <div className=" flex items-center gap-3">
-                    <img alt="profile" className="w-14 rounded-full" src={Author.dp} />
+                    <img alt="profile" className="w-14 h-14 object-cover rounded-full" src={Author.dp} />
                     <div>
                         <h2 className="text-xl font-medium">{Author.username}</h2>
                         <small className="text-sm">{timeAgo(created_at)}</small>
                     </div>
                 </div>
-                <div className="dropdown dropdown-right">
-                    <div tabIndex={0} role="button" className="m-1 mt-4 hover:bg-slate-400 rounded-lg"><BsThreeDots className="text-xl block"></BsThreeDots></div>
-                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-lg w-32">
-                        <li><a>Profile</a></li>
-                        <li><a>Remove</a></li>
-                    </ul>
-                </div>
+                {
+                    (user == author) && <div className="dropdown dropdown-right">
+                        <div tabIndex={0} role="button" className="m-1 mt-4 hover:bg-slate-400 rounded-lg"><BsThreeDots className="text-xl block"></BsThreeDots></div>
+                        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-lg w-32">
+                            <li><button onClick={() => setEdit(false)}>Edit</button></li>
+                            {
+                                edit ? <button onClick={() => deletePost(id)}><li><a>Delete</a></li></button> : <button onClick={() => haldleUpdate(id)}><li><a>Save</a></li></button>
+                            }
+                        </ul>
+                    </div>
+                }
             </div>
 
             <div className="my-2">
-                <h2 className="card-title font-medium text-md">{content}</h2>
+                <h2 className="card-title font-medium text-md"> {edit?<h2>{content}</h2> :<textarea className='bg-transparent w-full' onChange={(e)=>setcontent(e.target.value)} defaultValue={postContent} disabled={edit} type="text" /> } </h2>
             </div>
             {image_url && <figure><img className='' src={image_url} alt="image" /></figure>}
             {video_url && <Video videoUrl={video_url}></Video>}

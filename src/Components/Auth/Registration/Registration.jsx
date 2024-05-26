@@ -21,12 +21,13 @@ const RegistrationForm = () => {
     const navigate = useNavigate();
 
     const handleChange = (e) => {
-        const { name, value, files } = e.target;
+        const { name, value } = e.target;
         setFormData({
             ...formData,
-            [name]: files ? files[0] : value
+            [name]: value
         });
     };
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -47,30 +48,19 @@ const RegistrationForm = () => {
             last_name: formData.lastName,
             gender: formData.gender,
             phone: formData.phone,
-            dp: '',
+            dp: formData.dp,
             address: address
         };
         console.log(data);
         try {
-            await axios_base.post('/user/register/', data, {
+            const response =await axios_base.post('/user/register/', data, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
-            const loginResponse = await axios_base.post('/user/login/', {
-                email: formData.email,
-                password: formData.password
-            }, {
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-
-            const { token, user_id } = loginResponse.data;
-            localStorage.setItem('token', token);
-            localStorage.setItem('user_id', user_id);
-            localStorage.setItem('isOkay', true);
-            navigate('/');
+            console.log(response);
+            alert('check your email');
+            navigate('/login');
         } catch (err) {
             console.log(err);
         }
@@ -167,10 +157,11 @@ const RegistrationForm = () => {
 
                 <div className="mb-4">
                     <input
-                        type="file"
+                        type="text"
                         name="dp"
+                        placeholder="DP URL"
                         onChange={handleChange}
-                        className="file-input file-input-bordered w-full"
+                        className="input input-bordered w-full"
                     />
                 </div>
                 <div className="mb-4">

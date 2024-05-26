@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 
 const CommentBox = ({ isCollapsed, initialComments = [], dp, post_id }) => {
     const [comments, setComments] = useState(initialComments);
-
     useEffect(() => {
         setComments(initialComments);
     }, [initialComments]);
